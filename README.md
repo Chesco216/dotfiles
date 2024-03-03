@@ -16,6 +16,11 @@ sudo pacman -S polybar
 ~~~
 If you cant find the config file wich is conf.ini at .config/polybar/conf.ini you can find it at /etc/polybar/config.ini
 
+You also must install picom to get the transparency background, border corners and other stuff you may wanna configurate so install picom with the following command
+~~~
+sudo pacman -S picom
+~~~
+
 ## Starship
 
 For my bash promt im using starship wich i liked when i first saw it so to install it is simple, just run the following command

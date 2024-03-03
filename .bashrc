@@ -15,7 +15,7 @@ alias iuabtw='neofetch --ascii_distro arch_small'
 
 # Git aliases
 alias add='git add .'
-alias cum='git commit -m'
+alias cum='git commit -m '
 alias or='git remote add origin'
 alias br='git brach -M main'
 alias volveloco='git checkout HEAD^'
