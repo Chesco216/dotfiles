@@ -1,1 +1,1 @@
-.bashrc
+/home/xavi/.bashrc
