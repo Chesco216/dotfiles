@@ -329,6 +329,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("/home/xavi/Apps/Postman/./Postman") end,
     {description = "Postman", group = "Apps"}),
     
+    --Steam
+    awful.key({ modkey, "Control"},            "s",     function ()
+    awful.util.spawn("steam") end,
+    {description = "Steam", group = "Apps"}),
+    
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
