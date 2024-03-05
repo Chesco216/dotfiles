@@ -11,6 +11,8 @@ alias grep='grep --color=auto'
 alias sudovim='sudo -E nvim'
 alias luania='sudovim /etc/xdg/awesome/rc.lua'
 alias iuabtw='neofetch --ascii_distro arch_small'
+alias wifi='/home/xavi/Scripts/./wifi.sh'
+alias ls-wifi='nmcli dev wifi'
 # App aliases
 
 # Git aliases

@@ -313,6 +313,12 @@ globalkeys = gears.table.join(
                   end
               end,
               {description = "restore minimized", group = "client"}),
+    --System Shortcuts 
+    --Shutdown
+    awful.key({ modkey, "Control", "Shift" },            "s",     function ()
+    awful.util.spawn("shutdown now") end,
+    {description = "Shutdown", group = "Shortcuts"}),
+
     --Applications
     --Chrome
     awful.key({ modkey },            "c",     function ()
@@ -590,4 +596,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Spawn With Shell
 awful.spawn.with_shell("python /home/xavi/Scripts/set-ran-wall.py")
 awful.spawn.with_shell("picom --config /home/xavi/.config/picom/picom.conf")
-awful.spawn.with_shell("polybar left | polybar mid | polybar right")
+awful.spawn.with_shell("/etc/polybar/./launch.sh")

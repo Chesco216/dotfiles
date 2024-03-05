@@ -34,5 +34,5 @@ eval "$(starship init bash)"
 ~~~
 
 if this doesn't work for you then see the starship page at https://starship.rs/guide/#%F0%9F%9A%80-installation
-
+:
 
