@@ -13,6 +13,7 @@ alias luania='sudovim /etc/xdg/awesome/rc.lua'
 alias iuabtw='neofetch --ascii_distro arch_small'
 alias wifi='/home/xavi/Scripts/./wifi.sh'
 alias ls-wifi='nmcli dev wifi'
+alias rldm='systemctl restart lightdm'
 # App aliases
 
 # Git aliases

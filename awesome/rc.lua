@@ -315,9 +315,21 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
     --System Shortcuts 
     --Shutdown
-    awful.key({ modkey, "Control", "Shift" },            "s",     function ()
+    awful.key({ "Mod1" },            "-",     function ()
     awful.util.spawn("shutdown now") end,
     {description = "Shutdown", group = "Shortcuts"}),
+    --Increase brightness
+    awful.key({ modkey },            "u",     function ()
+    awful.util.spawn("brightnessctl set +5%") end,
+    {description = "Bright +", group = "Shortcuts"}),
+    --Decrease brightness
+    awful.key({ modkey },            "i",     function ()
+    awful.util.spawn("brightnessctl set 5%-") end,
+    {description = "Bright -", group = "Shortcuts"}),
+    --Mute
+    awful.key({ "Control" },            "m",     function ()
+    awful.util.spawn("amixer sset Master toggle") end,
+    {description = "Mute", group = "Shortcuts"}),
 
     --Applications
     --Chrome
@@ -597,3 +609,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("python /home/xavi/Scripts/set-ran-wall.py")
 awful.spawn.with_shell("picom --config /home/xavi/.config/picom/picom.conf")
 awful.spawn.with_shell("/etc/polybar/./launch.sh")
+awful.spawn.with_shell("xinput set-prop 'CUST0001:00 06CB:7E7E Touchpad' 'libinput Tapping Enabled' 1")
