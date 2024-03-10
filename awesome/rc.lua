@@ -332,7 +332,12 @@ globalkeys = gears.table.join(
     {description = "Mute", group = "Shortcuts"}),
 
     --Applications
-    --Chrome
+    --Obsidian
+    awful.key({ modkey },            "o",     function ()
+    awful.util.spawn("obsidian") end,
+    {description = "Obsidian", group = "Apps"}),
+    
+  --Chrome
     awful.key({ modkey },            "c",     function ()
     awful.util.spawn("chromium") end,
     {description = "Chrome", group = "Apps"}),

@@ -25,5 +25,7 @@ alias volveloco='git checkout HEAD^'
 
 PS1='[\u@\h \W]\$ '
 
-iuabtw
 eval "$(starship init bash)"
+
+iuabtw
+cowsay "putas todas putas"
