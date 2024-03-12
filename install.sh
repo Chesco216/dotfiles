@@ -36,50 +36,64 @@ if command -v apt &> /dev/null; then
     echo "neofetch already installed"
   fi
 
+  # ncspot
+  if command -v ncspot &> /dev/null; then
+    sudo apt install -y ncspot
+  else
+    echo "ncspot already installed"
+  fi
+
 elif command -v pacman &> /dev/null; then
   
   # kitty
   if command -v kitty &> /dev/null; then
-    sudo pacman -S kitty --no-confirm
+    sudo pacman -S kitty --noconfirm
   else
     echo "kitty already installed"
   fi
 
   # polybar
   if command -v polybar &> /dev/null; then
-    sudo pacman -S polybar --no-confirm
+    sudo pacman -S polybar --noconfirm
   else
     echo "polybar already installed"
   fi
 
   # picom 
   if command -v picom &> /dev/null; then
-    sudo pacman -S picom --no-confirm
+    sudo pacman -S picom --noconfirm
   else
     echo "picom already installed"
   fi
 
   # awesome
   if command -v awesome &> /dev/null; then
-    sudo pacman -S awesome --no-confirm
+    sudo pacman -S awesome --noconfirm
   else
     echo "awesome already installed"
   fi
 
   # neofetch
   if command -v neofetch &> /dev/null; then
-    sudo pacman -S neofetch --no-confirm
+    sudo pacman -S neofetch --noconfirm
   else
     echo "neofetch already installed"
+  fi
+
+  # ncspot
+  if command -v ncspot &> /dev/null; then
+    sudo pacman -S ncspot --noconfirm
+  else
+    echo "ncspot already installed"
   fi
 
 fi
 
 # Creating a copy of awesome config file
-sudo cp -f /etc/xdg/awesome/rc.lua /etc/xdg/awesome/copy-rc.lua
+sudo cp -rf /etc/xdg/awesome/rc.lua /etc/xdg/awesome/copy-rc.lua
 
 # Replacing the rc.lua file
-sudo cp -f $HOME/dotfiles/awesome/rc.lua /etc/xdg/awesome/rc.lua
+sudo cp -rf $HOME/dotfiles/awesome/rc.lua /etc/xdg/awesome/rc.lua
 
 # Replacing polybar config file 
 sudo cp -rf $HOME/dotfiles/polybar/ /etc/polybar/
@@ -91,8 +105,10 @@ cp -rf $HOME/dotfiles/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 cp -rf $HOME/dotfiles/picom/picom.conf $HOME/.config/picom/picom.conf
 
 # Replacing neofetch config file
-cp -rf $HOME/.dotfiles/neofetch/ $HOME/,config/neofetch/
+cp -rf $HOME/dotfiles/neofetch/ $HOME/.config/neofetch/
 
+# Replacing ncspot config file
+cp -rf $HOME/dotfiles/ncspot $HOME/.config/ncspot
 
 
 echo "Now press windows+ctrl+r or  command+ctrl+r to see changes or restart your display manager Ex: sudo systemctl restart sddm"
