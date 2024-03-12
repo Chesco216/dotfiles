@@ -43,6 +43,38 @@ if command -v apt &> /dev/null; then
     echo "ncspot already installed"
   fi
 
+  # feh
+  if command -v feh &> /dev/null; then
+    sudo apt install -y feh
+  else
+    echo "feh already installed"
+  fi
+  
+  # APPS I frequently use
+  # Chromium
+  if command -v chromium &> /dev/null; then
+    sudo apt install -y chromium
+    echo "Chromium "
+  else
+    echo "Chromium "
+  fi
+  
+  # Discord
+  if command -v discord &> /dev/null; then
+    sudo apt install -y discord
+    echo "Discord "
+  else
+    echo "Discord "
+  fi
+  
+  # Obsidian
+  if command -v obsidian &> /dev/null; then
+    sudo apt install -y discord
+    echo "Obsidian "
+  else
+    echo "Obsidian "
+  fi
+
 elif command -v pacman &> /dev/null; then
   
   # kitty
@@ -86,28 +118,96 @@ elif command -v pacman &> /dev/null; then
   else
     echo "ncspot already installed"
   fi
-
+  
+  # feh
+  if command -v feh &> /dev/null; then
+    sudo pacman -S feh --noconfirm
+  else
+    echo "feh already installed"
+  fi
+  
+  # APPS I frequently use
+  # Chromium
+  if command -v chromium &> /dev/null; then
+    sudo pacman -S chromium --noconfirm
+    echo "Chromium "
+  else
+    echo "Chromium "
+  fi
+  
+  # Discord
+  if command -v discord &> /dev/null; then
+    sudo pacman -S discord --noconfirm
+    echo "Discord "
+  else
+    echo "Discord "
+  fi
+  
+  # Obsidian
+  if command -v obsidian &> /dev/null; then
+    sudo pacman -S discord -noconfirm
+    echo "Obsidian "
+  else
+    echo "Obsidian "
+  fi
+  
 fi
 
-# Creating a copy of awesome config file
-sudo cp -rf /etc/xdg/awesome/rc.lua /etc/xdg/awesome/copy-rc.lua
+# Fonts directory
+fontsdir="$HOME/.local/share/fonts/"
+
+if [ -d "$fontsdir" ]; then
+    echo "fonts dir already exists"
+else
+    mkdir $HOME/.local/share/fonts/
+    echo "fonts dir created $HOME/.local/share/fonts/"
+fi
+
+# kitty directory
+kittydir="$HOME/.config/kitty/"
+
+if [ -d "$kittydir" ]; then
+    echo "kittydir dir already exists"
+else
+    mkdir $HOME/.config/kitty/
+    echo "kitty dir created $HOME/.config/kitty"
+fi
+
+# picom directory
+picomdir="$HOME/.local/share/fonts/"
+
+if [ -d "$picomdir" ]; then
+    echo "picom dir already exists"
+else
+    mkdir $HOME/.config/picom/
+    echo "picom dir created $HOME/.config/picom"
+fi
+
+# Scripts directory
+scriptsdir="$HOME/Scripts/"
+
+if [ -d "$scriptsdir" ]; then
+    echo "Scripts dir already exists"
+else
+    mkdir $HOME/Scripts/
+    echo "Scripts dir created $HOME/Scripts"
+fi
+
+
+# Nerd Fonts - Fira Code
+cp -r $HOME/dotfiles/FiraCodeNF $HOME/.local/share/fonts
 
 # Replacing the rc.lua file
-sudo cp -rf $HOME/dotfiles/awesome/rc.lua /etc/xdg/awesome/rc.lua
+sudo cp -rf $HOME/dotfiles/awesome/ /etc/xdg/awesome/
 
 # Replacing polybar config file 
 sudo cp -rf $HOME/dotfiles/polybar/ /etc/polybar/
-# Create kitty directory
-mkdir $HOME/.config/kitty/
 
 # Replacing kitty config file
-cp -rf $HOME/dotfiles/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
-
-# Create picom directory
-mkdir .config/picom
+cp -rf $HOME/dotfiles/kitty/ $HOME/.config/kitty/
 
 # Replacing picom config file
-cp -rf $HOME/dotfiles/picom/picom.conf $HOME/.config/picom/picom.conf
+cp -rf $HOME/dotfiles/picom/ $HOME/.config/picom/
 
 # Replacing neofetch config file
 cp -rf $HOME/dotfiles/neofetch/ $HOME/.config/neofetch/
@@ -115,5 +215,7 @@ cp -rf $HOME/dotfiles/neofetch/ $HOME/.config/neofetch/
 # Replacing ncspot config file
 cp -rf $HOME/dotfiles/ncspot $HOME/.config/ncspot
 
+# Copying wallpapers Scripts
+cp -rf $HOME/dotfiles/set-ran-wall.py $HOME/Scripts/
 
 echo "Now press windows+ctrl+r or  command+ctrl+r to see changes or restart your display manager Ex: sudo systemctl restart sddm"

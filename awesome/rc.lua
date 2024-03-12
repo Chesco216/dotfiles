@@ -332,6 +332,11 @@ globalkeys = gears.table.join(
     {description = "Mute", group = "Shortcuts"}),
 
     --Applications
+    --VMWare
+    awful.key({ modkey, "v" },            "m",     function ()
+    awful.util.spawn("vmware -n") end,
+    {description = "VMWare", group = "Apps"}),
+    
     --Obsidian
     awful.key({ modkey },            "o",     function ()
     awful.util.spawn("obsidian") end,
@@ -611,8 +616,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 --
 -- Spawn With Shell
-awful.spawn.with_shell("python $HOME/dotfiles/set-ran-wall.py")
+awful.spawn.with_shell("python $HOME/Scripts/set-ran-wall.py")
 awful.spawn.with_shell("picom --config $HOME/.config/picom/picom.conf")
 awful.spawn.with_shell("/etc/polybar/./launch.sh")
--- uncomment in case of laprops and change name of touchpad, you can see it by running xinput
--- awful.spawn.with_shell("xinput set-prop 'CUST0001:00 06CB:7E7E Touchpad' 'libinput Tapping Enabled' 1")
+awful.spawn.with_shell("xinput set-prop 'CUST0001:00 06CB:7E7E Touchpad' 'libinput Tapping Enabled' 1")

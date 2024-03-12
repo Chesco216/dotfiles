@@ -10,16 +10,17 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias sudovim='sudo -E nvim'
 alias luania='sudovim /etc/xdg/awesome/rc.lua'
-alias iuabtw='neofetch --ascii_distro arch_small'
+alias iuabtw='neofetch'
 alias wifi='/home/xavi/Scripts/./wifi.sh'
 alias ls-wifi='nmcli dev wifi'
 alias rldm='systemctl restart lightdm'
+alias woped='java -jar $HOME/WoPeD/WoPeD-Starter.jar'
 # App aliases
 
 # Git aliases
 alias add='git add .'
 alias cum='git commit -m '
-alias or='git remote add origin'
+alias ror='git remote add origin'
 alias br='git brach -M main'
 alias volveloco='git checkout HEAD^'
 
@@ -28,4 +29,4 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 iuabtw
-cowsay "putas todas putas"
+cowsay -f kiss.cow "putas todas putas"
