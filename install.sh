@@ -97,9 +97,14 @@ sudo cp -rf $HOME/dotfiles/awesome/rc.lua /etc/xdg/awesome/rc.lua
 
 # Replacing polybar config file 
 sudo cp -rf $HOME/dotfiles/polybar/ /etc/polybar/
+# Create kitty directory
+mkdir $HOME/.config/kitty/
 
 # Replacing kitty config file
 cp -rf $HOME/dotfiles/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+
+# Create picom directory
+mkdir .config/picom
 
 # Replacing picom config file
 cp -rf $HOME/dotfiles/picom/picom.conf $HOME/.config/picom/picom.conf
