@@ -332,10 +332,11 @@ globalkeys = gears.table.join(
     {description = "Mute", group = "Shortcuts"}),
 
     --Applications
-    --VMWare
-    awful.key({ modkey, "v" },            "m",     function ()
-    awful.util.spawn("vmware -n") end,
-    {description = "VMWare", group = "Apps"}),
+    
+    --Ulauncher
+    awful.key({ modkey },            "0",     function ()
+    awful.util.spawn("ulauncher") end,
+    {description = "Ulauncher", group = "Apps"}),
     
     --Obsidian
     awful.key({ modkey },            "o",     function ()
@@ -362,6 +363,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("steam") end,
     {description = "Steam", group = "Apps"}),
     
+    --Unixporn
+    awful.key({ modkey, "Shift"},            "u",     function ()
+    awful.util.spawn("chromium https://www.reddit.com/r/unixporn/") end,
+    {description = "Unixporn", group = "Apps"}),
+
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),

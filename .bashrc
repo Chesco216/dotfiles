@@ -11,17 +11,19 @@ alias grep='grep --color=auto'
 alias sudovim='sudo -E nvim'
 alias luania='sudovim /etc/xdg/awesome/rc.lua'
 alias iuabtw='neofetch'
-alias wifi='/home/xavi/Scripts/./wifi.sh'
+alias wifi='nohup /home/xavi/Scripts/./wifi.sh &'
 alias ls-wifi='nmcli dev wifi'
-alias rldm='systemctl restart lightdm'
-alias woped='java -jar $HOME/WoPeD/WoPeD-Starter.jar'
+alias woped='nohup java -jar $HOME/WoPeD/WoPeD-Starter.jar &'
+alias vmware='nohup vmware &'
+alias rsddm='sudo systemctl restart sddm'
+alias idea=' nohup /home/xavi/Apps/idea-IU-233.14808.21/bin/./idea.sh &'
 # App aliases
 
 # Git aliases
 alias add='git add .'
 alias cum='git commit -m '
 alias ror='git remote add origin'
-alias br='git brach -M main'
+alias br='git branch -M main'
 alias volveloco='git checkout HEAD^'
 
 PS1='[\u@\h \W]\$ '
