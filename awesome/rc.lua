@@ -330,6 +330,12 @@ globalkeys = gears.table.join(
     awful.key({ "Control" },            "m",     function ()
     awful.util.spawn("amixer sset Master toggle") end,
     {description = "Mute", group = "Shortcuts"}),
+    
+    -- NOTE: does not work, i dont fucking know why
+    --Change wallpaper
+    awful.key({ "Control", "Shift" },            "0",     function ()
+    awful.util.spawn("set-wall") end,
+    {description = "Change wallpaper", group = "Shortcuts"}),
 
     --Applications
     

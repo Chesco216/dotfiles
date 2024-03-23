@@ -17,6 +17,9 @@ alias woped='nohup java -jar $HOME/WoPeD/WoPeD-Starter.jar &'
 alias vmware='nohup vmware &'
 alias rsddm='sudo systemctl restart sddm'
 alias idea=' nohup /home/xavi/Apps/idea-IU-233.14808.21/bin/./idea.sh &'
+alias ptnu='nohup packettracer &'
+alias set-wall='$HOME/Scripts/./wall-script.sh'
+alias rice='$HOME/Scripts/./dotfiles.sh'
 # App aliases
 
 # Git aliases
@@ -31,4 +34,4 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 iuabtw
-cowsay -f kiss.cow "putas todas putas"
+# cowsay -f kiss.cow "putas todas putas"
