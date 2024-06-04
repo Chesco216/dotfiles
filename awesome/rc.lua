@@ -523,7 +523,9 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
-
+    { rule = { class = "Chromium" },
+      properties = { maximized = false, fullscreen = false }
+    },
     -- Floating clients.
     { rule_any = {
         instance = {

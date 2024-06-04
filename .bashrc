@@ -30,6 +30,7 @@ alias cum='git commit -m '
 alias ror='git remote add origin'
 alias br='git branch -M main'
 alias volveloco='git checkout HEAD^'
+alias niktofile='sudo /home/xavi/Documents/SEG/./nktfl.sh'
 
 PS1='[\u@\h \W]\$ '
 
