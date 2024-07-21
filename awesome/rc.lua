@@ -317,6 +317,7 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
     --System Shortcuts 
+  --TODO: make power off button to nos shutdown and just stand by
     --Shutdown
     awful.key({ "Mod1" },            "-",     function ()
     awful.util.spawn("shutdown now") end,
