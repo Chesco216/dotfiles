@@ -318,6 +318,11 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
     --System Shortcuts 
   --TODO: make power off button to nos shutdown and just stand by
+  
+    --Lock Screen
+    awful.key({ modkey },            ".",     function ()
+    awful.util.spawn("slock") end,
+    {description = "Lock Screen", group = "Shortcuts"}),
     --Shutdown
     awful.key({ "Mod1" },            "-",     function ()
     awful.util.spawn("shutdown now") end,
@@ -363,6 +368,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("discord") end,
     {description = "Discord", group = "Apps"}),
     
+    --Arduino
+    awful.key({ modkey },            "a",     function ()
+    awful.util.spawn("arduino") end,
+    {description = "Arduino", group = "Apps"}),
+
     --Postman
     -- awful.key({ modkey, "Shift"},            "p",     function ()
     -- awful.util.spawn("/home/xavi/Apps/Postman/./Postman") end,

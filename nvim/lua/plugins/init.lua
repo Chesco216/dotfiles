@@ -194,6 +194,13 @@ local plugins = {
       }
     end
   },
+  --WARN: no furula el astro
+  -- {
+  --   'wuelnerdotexe/vim-astro',
+  --   config = function ()
+  --     require('vim-astro').setup {}
+  --   end
+  -- },
 }
 
 return plugins
