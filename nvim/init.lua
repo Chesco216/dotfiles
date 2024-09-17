@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.wo.relativenumber = true
+vim.opt.scrolloff = 8
 
 local lazy_config = require "configs.lazy"
 

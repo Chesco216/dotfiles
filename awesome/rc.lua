@@ -319,6 +319,19 @@ globalkeys = gears.table.join(
     --System Shortcuts 
   --TODO: make power off button to nos shutdown and just stand by
   
+    
+    --Keyboard layout ES
+    awful.key({ modkey, "space" },     "e",   function ()
+    awful.util.spawn("setxkbmap -layout es") end,
+    {description = "Keyboard es", group = "Shortcuts"}),
+    --Keyboard layout US
+    awful.key({ modkey, "space" },     "u",   function ()
+    awful.util.spawn("setxkbmap -layout us") end,
+    {description = "Keyboard us", group = "Shortcuts"}),
+    --Screenshot cut
+    awful.key({ modkey, "Shift" },            "s",     function ()
+    awful.util.spawn("flameshot gui -c -p /home/xavi/Pictures/Screenshots/") end,
+    {description = "Cut Screenshot", group = "Shortcuts"}),
     --Lock Screen
     awful.key({ modkey },            ".",     function ()
     awful.util.spawn("slock") end,

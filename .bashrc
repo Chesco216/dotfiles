@@ -1,6 +1,10 @@
 #
 # ~/.bashrc
 #
+# gspt-git
+export SPOTIFY_ID=862bdfc14de2413581a070cb8184885a
+export SPOTIFY_SECRET=cb4c8c60ef76437c9848916db3293d07
+
 export PATH="/home/xavi/Apps/docker/:$PATH"
 export PATH="/home/xavi/Apps/node-v20.12.1-linux-x64/bin/:$PATH"
 export PATH="/home/xavi/Apps/flutter/bin/:$PATH"
@@ -42,3 +46,4 @@ iuabtw
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
