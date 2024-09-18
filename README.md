@@ -2,7 +2,7 @@
 
 ![plot](./desk.jpg)
 
-Im using awesome as my window manager cause i found it easy an fun when customize it uses a lua file to config wich is rc.lua, you can find it in .config/awesome/rc.lua or in /etc/xdg/awesome/rc.lua
+Im using awesome as my window manager cause i found it easy and fun when customize it uses a lua file to config which is rc.lua, you can find it in .config/awesome/rc.lua or in /etc/xdg/awesome/rc.lua
 
 ## Programs
 
@@ -34,5 +34,3 @@ eval "$(starship init bash)"
 ~~~
 
 if this doesn't work for you then see the starship page at https://starship.rs/guide/#%F0%9F%9A%80-installation
-:
-
