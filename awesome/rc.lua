@@ -334,7 +334,7 @@ globalkeys = gears.table.join(
     {description = "Cut Screenshot", group = "Shortcuts"}),
     --Lock Screen
     awful.key({ modkey },            ".",     function ()
-    awful.util.spawn("slock") end,
+    awful.util.spawn("i3lock-fancy") end,
     {description = "Lock Screen", group = "Shortcuts"}),
     --Shutdown
     awful.key({ "Mod1" },            "-",     function ()

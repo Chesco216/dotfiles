@@ -36,6 +36,9 @@ alias br='git branch -M main'
 alias volveloco='git checkout HEAD^'
 alias niktofile='sudo /home/xavi/Documents/SEG/./nktfl.sh'
 
+# Some Tools
+alias rip='/home/xavi/Repos/Blackarch/RegRipper3.0/./rip'
+
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
