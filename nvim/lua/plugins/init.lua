@@ -20,8 +20,10 @@ local plugins = {
   	"williamboman/mason.nvim",
   	opts = {
   		ensure_installed = {
-  			"lua-language-server", "stylua",
-  			"html-lsp", "css-lsp" , "prettier"
+  			"html-lsp", "css-lsp" , "prettier",
+        "html", "cssls", "tailwindcss",
+        "emmet-language-server", "phpactor",
+        "volar", "intelephense"
   		},
   	},
   },
@@ -31,7 +33,7 @@ local plugins = {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css", "dart"
+       "html", "css", "dart", "php"
   		},
   	},
   },
@@ -194,13 +196,24 @@ local plugins = {
       }
     end
   },
-  --WARN: no furula el astro
-  -- {
-  --   'wuelnerdotexe/vim-astro',
-  --   config = function ()
-  --     require('vim-astro').setup {}
-  --   end
-  -- },
+  {
+    "adalessa/laravel.nvim",
+    dependencies = {
+      "tpope/vim-dotenv",
+      "nvim-telescope/telescope.nvim",
+      "MunifTanjim/nui.nvim",
+      "kevinhwang91/promise-async",
+    },
+    cmd = { "Laravel" },
+    -- keys = {
+    --   { "<leader>la", ":Laravel artisan<cr>" },
+    --   { "<leader>lr", ":Laravel routes<cr>" },
+    --   { "<leader>lm", ":Laravel related<cr>" },
+    -- },
+    event = { "VeryLazy" },
+    opts = {},
+    config = true,
+  },
 }
 
 return plugins
